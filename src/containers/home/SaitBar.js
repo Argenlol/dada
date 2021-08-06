@@ -26,17 +26,21 @@ const SaitBar = () => {
         search.set(params, value)
         let url = `${history.location.pathname}?${search.toString()}`
         history.push(url)
-        getProducts()
+        getProducts(history)
 
     }
+
 
     function reset() {
         history.push('/')
-        getProducts()
+        getProducts(history)
     }
+
+
     function filterByPrice(value) {
         filterProducts(value)
     }
+
 
     return (
         <Grid item md={3}>

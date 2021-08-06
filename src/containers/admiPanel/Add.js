@@ -46,9 +46,17 @@ const Add = () => {
     })
 
     function handleInput(e) {
-        let obj = {
-            ...newProduct,
-            [e.target.name]: e.target.value
+        let obj = {};
+        if (e.target.name === "price") {
+            obj = {
+                ...newProduct,
+                [e.target.name]: +e.target.value
+            }
+        } else {
+            obj = {
+                ...newProduct,
+                [e.target.name]: e.target.value
+            }
         }
         setNewProduct(obj)
     }

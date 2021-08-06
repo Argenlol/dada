@@ -9,7 +9,6 @@ import PrimarySearchAppBar from './containers/home/MenuAppBar';
 import ProductDetail from './containers/ProductDetail/ProductDetail';
 import AdminContextProvider from './context/AdminContext';
 import ClientContextProvider from './context/ClientContext';
-import Users from './containers/home/Users'
 
 const Routes = () => {
     return (
@@ -24,7 +23,6 @@ const Routes = () => {
                         <Route exact path="/signup" component={SignUp} />
                         <Route exact path="/cart" component={Cart} />
                         <Route exact path="/product-detail/:id" component={ProductDetail} />
-                        <Route exact path ='/users' component={Users}/>
                     </Switch>
                 </BrowserRouter>
             </AdminContextProvider>

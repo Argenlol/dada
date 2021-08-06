@@ -18,10 +18,6 @@ import { Link, useHistory } from 'react-router-dom';
 import { clientContext } from '../../context/ClientContext';
 import AirplanemodeActiveIcon from '@material-ui/icons/AirplanemodeActive';
 import SupervisorAccountIcon from '@material-ui/icons/SupervisorAccount';
-import { Nav } from 'react-bootstrap';
-
-
-
 
 const useStyles = makeStyles((theme) => ({
     grow: {
@@ -129,11 +125,12 @@ export default function PrimarySearchAppBar() {
     function handleSearchInput(params, value) {
         setSearchWord(value)
         search.set(params, value)
-        let url = `${history.location.pathname}?${search.toString()}`
-        history.push(url)
+        search.set("_page", 1)
+        history.push(`${history.location.pathname}?${search.toString()}`)
+
     }
     useEffect(() => {
-        getProducts(searchWord)
+        getProducts(history)
     }, [searchWord])
 
     // useEffect(() => {
@@ -217,7 +214,6 @@ export default function PrimarySearchAppBar() {
                     <div className={classes.search}>
                         <div className={classes.searchIcon}>
                             <SearchIcon />
-                            
                         </div>
                         <InputBase
                             onChange={(e) => handleSearchInput("q", e.target.value)}
@@ -228,14 +224,11 @@ export default function PrimarySearchAppBar() {
                             }}
                             name="searchValue"
                             inputProps={{ 'aria-label': 'search' }}
-                            
                         />
                     </div>
-                    <Nav className='mr-auto'>
-                        <Nav.Link><Link to='/'>Home</Link></Nav.Link>
-                        <Nav.Link><Link to='/users'>Users</Link></Nav.Link>
-                        <Nav.Link><Link to='/about'>About Us</Link></Nav.Link>
-                    </Nav>
+                    <div style={{ marginRight: 30 }}>About US</div>
+
+                    <div>CONTACTS</div>
                     <div className={classes.grow} />
                     <div className={classes.sectionDesktop}>
                         <Link to="/cart">

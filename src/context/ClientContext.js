@@ -10,13 +10,14 @@ const INIT_STATE = {
     products: null,
     productCountCart: JSON.parse(localStorage.getItem('cart')) ? JSON.parse(localStorage.getItem('cart')).products.length : 0,
     cartData: null,
-    productDetail: null
+    productDetail: null,
+    paginationPages: 1,
 }
 
 const reduser = (state = INIT_STATE, action) => {
     switch (action.type) {
         case "GET_PRODUCTS":
-            return { ...state, products: action.payload }
+            return { ...state, products: action.payload.data, paginationPages: Math.ceil(action.payload.headers["x-total-count"] / 4) }
         case "ADD_AND_DELETE_PRODUCT_IN_CART":
             return { ...state, productCountCart: action.payload }
         case "GET_CART":
@@ -37,11 +38,15 @@ const ClientContextProvider = ({ children }) => {
 
     const [state, dispatch] = useReducer(reduser, INIT_STATE)
 
-    const getProducts = async () => {
-        const { data } = await axios(`${JSON_API}${window.location.search}`)
+    const getProducts = async (history) => {
+        const search = new URLSearchParams(window.location.search)
+        search.set('_limit', 4)
+        history ? (history.push(`${history.location.pathname}?${search.toString()}`)) : (console.log(null))
+        const res = await axios(`${JSON_API}?_limit=4&${window.location.search}`)
+
         dispatch({
             type: "GET_PRODUCTS",
-            payload: data
+            payload: res
         })
     }
     const registerUser = async (newUser, history) => {
@@ -168,6 +173,7 @@ const ClientContextProvider = ({ children }) => {
             productCountCart: state.productCountCart,
             cartData: state.cartData,
             productDetail: state.productDetail,
+            paginationPages: state.paginationPages,
             getProducts,
             registerUser,
             loginUser,
