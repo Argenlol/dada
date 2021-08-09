@@ -5,6 +5,9 @@ import Main from './Main';
 import { Pagination } from '@material-ui/lab';
 import { useHistory } from 'react-router-dom';
 import { clientContext } from '../../context/ClientContext';
+import Footer from './Footer';
+
+
 
 const Home = () => {
     const [page, setPage] = useState(1)
@@ -29,12 +32,13 @@ const Home = () => {
 
 
     return (
-        <div style={{ backgroundImage: `url(https://mocah.org/uploads/posts/4034417-steamship-ship-tourism-travel-beach-island-sunny-blue-summer-palms-sand-sea-calm-beautiful-white-sky.jpg)`, backgroundSize: "cover" }}>
+        <div style={{ backgroundColor: "#b2ebf2", backgroundSize: "cover" }}>
             {/* <PrimarySearchAppBar /> */}
             <div>
                 <Main />
                 <List />
                 <SaitBar />
+                <Footer />
                 <div />
                 <Pagination count={5} page={page} onChange={handlePage} size="medium" />
             </div >

@@ -19,7 +19,7 @@ const List = () => {
 
                         ))
                     ) : (
-                        <h1>figvam</h1>
+                        <h1>ничего нет</h1>
                     )
                 ) : (
                     <h1>LOADING...</h1>

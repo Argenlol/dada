@@ -1,4 +1,3 @@
-import { StarRate } from '@material-ui/icons';
 import axios from 'axios';
 import React, { useReducer } from 'react';
 import { calcSubPrice, calcTotalPrice } from '../helpers/CalcPrice';

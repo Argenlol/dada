@@ -26,6 +26,8 @@ export default function MediaCard({ product }) {
     const classes = useStyles();
     const { addAndDeleteProductInCard, checkProductInCart } = useContext(clientContext)
 
+
+
     return (
         <Card className={classes.root}>
             <Link to={`/product-detail/${product.id}`}>

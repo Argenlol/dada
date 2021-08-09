@@ -38,8 +38,8 @@ const Cart = () => {
 
                                             <tr key={item.product.id} >
                                                 <td><img width="50" src={item.product.images} /></td>
-                                                <td>{item.product.price}</td>
                                                 <td>{item.product.title}</td>
+                                                <td>{item.product.price}</td>
                                                 <td><input min="1" onChange={(e) => changeCountProduct(e.target.value)} type="number" value={item.count} /></td>
                                                 <td>{calcSubPrice(item)}</td>
 

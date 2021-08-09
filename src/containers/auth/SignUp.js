@@ -26,6 +26,7 @@ const SignUp = () => {
             <input onChange={handleInput} name="password" type="password" />
             <button onClick={handleClick}>REGISTRY</button>
         </div>
+
     );
 };
 

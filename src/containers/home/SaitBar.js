@@ -44,7 +44,7 @@ const SaitBar = () => {
 
     return (
         <Grid item md={3}>
-            <Paper className={classes.paper} style={{ backgroundColor: "ThreeDDarkShadow" }}>
+            <Paper className={classes.paper} style={{ backgroundColor: "#64ffda" }}>
                 <Grid>
                     <FormControl component="fieldset">
                         <FormLabel component="legend">SORT</FormLabel>
