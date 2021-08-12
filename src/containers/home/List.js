@@ -16,16 +16,14 @@ const List = () => {
                     products.length ? (
                         products.map(product => (
                             <MediaCard key={product.id} product={product} />
-
                         ))
                     ) : (
-                        <h1>figvam</h1>
+                        <h1>Ничего Нет !</h1>
                     )
                 ) : (
                     <h1>LOADING...</h1>
                 )
             }
-
         </div>
     );
 };

@@ -11,25 +11,25 @@ const tutorialSteps = [
     {
         label: 'LAST MINUTE TOURS LAS VEGAS',
         imgPath:
-            'https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60',
+            'https://c1.wallpaperflare.com/preview/548/535/741/las-vegas-vegas-strip-vegas-strip.jpg',
     },
     {
-        label: 'Venice FREQUENTLY VISITED PLACES ',
+        label: 'VENICE FREQUENTLY VISITED PLACES ',
         imgPath:
-            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAJdF0ahtBmTRbx5UkgGHtEhVvFmEIeOfZOA&usqp=CAU',
+            'https://wallpaperaccess.com/full/201217.jpg',
     },
     {
-        label: 'Greece TWO TICKETS FOR THE PRICE OF ONE',
+        label: 'GREECE TWO TICKETS FOR THE PRICE OF ONE',
         imgPath:
-            'https://boomersdaily.files.wordpress.com/2021/01/aerial-travel-video-greece-mediterranean-january-8-2021.jpg?w=672&h=372&crop=1',
+            'https://wallpaperaccess.com/full/42008.jpg',
     },
     {
-        label: 'Sary Chelek ETHNIC PLACES',
+        label: 'SARY CHELEC ETHNIC PLACES',
         imgPath:
-            'https://c4.wallpaperflare.com/wallpaper/848/9/162/pool-5k-tourism-travel-wallpaper-preview.jpg',
+            'https://www.baibol.kg/img/attraction_gallery/152413521972567.jpg',
     },
     {
-        label: 'Orion nebula EXCLUSIV',
+        label: 'ORION NEBULA EXCLUSIV',
         imgPath:
             'https://i.ytimg.com/vi/xCFg5udYbAg/maxresdefault.jpg',
     },
@@ -37,8 +37,7 @@ const tutorialSteps = [
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        marginLeft: 350,
-        maxWidth: 800,
+        maxWidth: "max",
         flexGrow: 1,
     },
     header: {
@@ -49,8 +48,8 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: theme.palette.background.default,
     },
     img: {
-        height: 255,
-        maxWidth: 800,
+        height: 530,
+        maxWidth: "max",
         overflow: 'hidden',
         display: 'block',
         width: '100%',
@@ -99,6 +98,7 @@ export default function TextMobileStepper() {
                     </Button>
                 }
             />
+
         </div>
     );
 }

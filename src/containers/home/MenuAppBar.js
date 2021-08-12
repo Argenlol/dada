@@ -18,6 +18,7 @@ import { Link, useHistory } from 'react-router-dom';
 import { clientContext } from '../../context/ClientContext';
 import AirplanemodeActiveIcon from '@material-ui/icons/AirplanemodeActive';
 import SupervisorAccountIcon from '@material-ui/icons/SupervisorAccount';
+import { Nav } from 'react-bootstrap';
 
 const useStyles = makeStyles((theme) => ({
     grow: {
@@ -148,8 +149,8 @@ export default function PrimarySearchAppBar() {
             open={isMenuOpen}
             onClose={handleMenuClose}
         >
-            <MenuItem onClick={goSignUp}>registry</MenuItem>
-            <MenuItem onClick={goSignIn}>voiti</MenuItem>
+            <MenuItem onClick={goSignUp}>REGISTRY</MenuItem>
+            <MenuItem onClick={goSignIn}>SIGN IN</MenuItem>
         </Menu>
     );
 
@@ -191,7 +192,7 @@ export default function PrimarySearchAppBar() {
                 >
                     <AccountCircle />
                 </IconButton>
-                <p>registry</p>
+                <p>Registry</p>
             </MenuItem>
         </Menu>
     );
@@ -226,9 +227,12 @@ export default function PrimarySearchAppBar() {
                             inputProps={{ 'aria-label': 'search' }}
                         />
                     </div>
-                    <div style={{ marginRight: 30 }}>About US</div>
+                    <Nav className='mr-auto'>
+                        <Nav.Link style={{ marginRight: 35 }} ><Link to='/users'>INFORMATION ABOUT COUNTRYS</Link></Nav.Link>
 
-                    <div>CONTACTS</div>
+                        <Nav.Link><Link to='/about'>ABOUT US</Link></Nav.Link>
+                    </Nav>
+
                     <div className={classes.grow} />
                     <div className={classes.sectionDesktop}>
                         <Link to="/cart">

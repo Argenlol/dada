@@ -23,7 +23,10 @@ const useStyles = makeStyles({
         padding: "10px",
         background: "lightBlue",
         color: "white"
-    }
+
+    },
+    
+    input__label:{color:"white"}
 })
 
 const Add = () => {
@@ -84,18 +87,18 @@ const Add = () => {
         <>
             <div className={classes.main}>
                 <div className={classes.divs}>
-                    <TextField value={newProduct.title} onChange={handleInput} name="title" id="standart-basic" label="NAME" />
-                    <TextField value={newProduct.description} onChange={handleInput} name="description" id="standart-basic" label="SURNAME" />
-                    <TextField value={newProduct.price} onChange={handleInput} name="price" id="standart-basic" label="PRICE" />
-                    <TextField value={newProduct.author} onChange={handleInput} name="author" id="standart-basic" label="PERSON" />
+                    <TextField InputLabelProps={{ className: classes.input__label }} value={newProduct.title} onChange={handleInput} name="title" id="standart-basic" label="NAME" />
+                    <TextField InputLabelProps={{ className: classes.input__label }}value={newProduct.description} onChange={handleInput} name="description" id="standart-basic" label="SURNAME" />
+                    <TextField InputLabelProps={{ className: classes.input__label }}value={newProduct.price} onChange={handleInput} name="price" id="standart-basic" label="PRICE" />
+                    <TextField InputLabelProps={{ className: classes.input__label }}value={newProduct.author} onChange={handleInput} name="author" id="standart-basic" label="PERSON" />
 
 
                 </div>
                 <div className={classes.divs}>
-                    <TextField value={newProduct.phone} onChange={handleInput} name="phone" id="standart-basic" label="PHONE NUMER" />
-                    <TextField value={newProduct.category} onChange={handleInput} name="category" id="standart-basic" label="COUNTRY" />
-                    <TextField value={newProduct.images} onChange={handleInput} name="images" id="standart-basic" label="FOTO" />
-                    <TextField value={newProduct.countInStock} onChange={handleInput} name="countInStock" id="standart-basic" label="UNIT" />
+                    <TextField InputLabelProps={{ className: classes.input__label }}value={newProduct.phone} onChange={handleInput} name="phone" id="standart-basic" label="PHONE NUMER" />
+                    <TextField InputLabelProps={{ className: classes.input__label }}value={newProduct.category} onChange={handleInput} name="category" id="standart-basic" label="COUNTRY" />
+                    <TextField InputLabelProps={{ className: classes.input__label }}value={newProduct.images} onChange={handleInput} name="images" id="standart-basic" label="FOTO" />
+                    <TextField InputLabelProps={{ className: classes.input__label }}value={newProduct.countInStock} onChange={handleInput} name="countInStock" id="standart-basic" label="UNIT" />
 
 
                 </div>
