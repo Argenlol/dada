@@ -4,7 +4,6 @@ import { useHistory } from 'react-router-dom';
 import { clientContext } from '../../context/ClientContext';
 
 
-
 const useStyles = makeStyles(theme => ({
     root: {
         flexGrow: 1
@@ -43,11 +42,11 @@ const SaitBar = () => {
 
 
     return (
-        <Grid item md={3}>
-            <Paper className={classes.paper} style={{ backgroundColor: "#64ffda" }}>
+        <Grid item md={3}>  
+            <Paper className={classes.paper} style={{ height: 400, backgroundColor: "#e1f5fe", marginTop: 20 }}>
                 <Grid>
                     <FormControl component="fieldset">
-                        <FormLabel component="legend">SORT</FormLabel>
+                        <FormLabel component="legend" style={{ paddingTop: 50, marginLeft:20, marginBottom:8}}>SORT</FormLabel>
                         <RadioGroup onChange={(e) => fetchProducts('category', e.target.value)} aria-label="memory" name="memory1">
                             <FormControlLabel value="TURKEY" control={<Radio />} label="TURKEY"></FormControlLabel>
                             <FormControlLabel value="GREECE" control={<Radio />} label="GREECE"></FormControlLabel>
@@ -58,10 +57,18 @@ const SaitBar = () => {
                         </RadioGroup>
                     </FormControl>
                 </Grid>
-                <Button onClick={reset} variant="warning">reset</Button>
+                <Button onClick={reset} variant="contained" color="secondary">Reset</Button>
             </Paper>
         </Grid>
+
     );
 };
 
 export default SaitBar;
+
+
+
+
+
+
+

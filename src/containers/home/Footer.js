@@ -9,8 +9,7 @@ const Footer = () => {
             backgroundColor: '#3d5afe', color: '#fafafa', size: "10px", maxWidth: "max"
         }}>
             <Container style={{ display: 'flex', justifyContent: 'center', padding: '10px' }}>
-                <p> Weclome to TRAVEL & TOUR</p>
-                <p></p>
+                <p> WELCOME TO TRAVEL & TOUR</p>
             </Container>
         </Container>
 

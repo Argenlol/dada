@@ -6,6 +6,8 @@ import { Pagination } from '@material-ui/lab';
 import { useHistory } from 'react-router-dom';
 import { clientContext } from '../../context/ClientContext';
 import Footer from './Footer';
+import Blog from './Blog';
+import BlogSection from './BlogSection';
 
 
 
@@ -37,11 +39,15 @@ const Home = () => {
             <div>
                 <Main />
                 <List />
-                <SaitBar />
-                <Footer />
                 <div />
-                <Pagination count={5} page={page} onChange={handlePage} size="medium" />
+                <Pagination style={{ display: "flex", justifyContent: "center", marginTop: 15 }} count={5} page={page} onChange={handlePage} size="medium" />
             </div >
+            <div style={{ display: "flex", justifyContent: "space-evenly" }}>
+                <SaitBar />
+                <Blog />
+            </div>
+            <BlogSection />
+            <Footer />
         </div >
     );
 };

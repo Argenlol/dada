@@ -192,7 +192,7 @@ export default function PrimarySearchAppBar() {
                 >
                     <AccountCircle />
                 </IconButton>
-                <p>registry</p>
+                <p>Registry</p>
             </MenuItem>
         </Menu>
     );
@@ -230,7 +230,7 @@ export default function PrimarySearchAppBar() {
                     <Nav className='mr-auto'>
                         <Nav.Link style={{ marginRight: 35 }} ><Link to='/users'>INFORMATION ABOUT COUNTRYS</Link></Nav.Link>
 
-                        <Nav.Link><Link to='/about'>ABOUT AS</Link></Nav.Link>
+                        <Nav.Link><Link to='/about'>ABOUT US</Link></Nav.Link>
                     </Nav>
 
                     <div className={classes.grow} />

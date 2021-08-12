@@ -14,22 +14,22 @@ const tutorialSteps = [
             'https://c1.wallpaperflare.com/preview/548/535/741/las-vegas-vegas-strip-vegas-strip.jpg',
     },
     {
-        label: 'Venice FREQUENTLY VISITED PLACES ',
+        label: 'VENICE FREQUENTLY VISITED PLACES ',
         imgPath:
             'https://wallpaperaccess.com/full/201217.jpg',
     },
     {
-        label: 'Greece TWO TICKETS FOR THE PRICE OF ONE',
+        label: 'GREECE TWO TICKETS FOR THE PRICE OF ONE',
         imgPath:
             'https://wallpaperaccess.com/full/42008.jpg',
     },
     {
-        label: 'Sary Chelek ETHNIC PLACES',
+        label: 'SARY CHELEC ETHNIC PLACES',
         imgPath:
             'https://www.baibol.kg/img/attraction_gallery/152413521972567.jpg',
     },
     {
-        label: 'Orion nebula EXCLUSIV',
+        label: 'ORION NEBULA EXCLUSIV',
         imgPath:
             'https://i.ytimg.com/vi/xCFg5udYbAg/maxresdefault.jpg',
     },
@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: theme.palette.background.default,
     },
     img: {
-        height: 500,
+        height: 530,
         maxWidth: "max",
         overflow: 'hidden',
         display: 'block',
